@@ -94,6 +94,9 @@ export const serviceAuthMiddleware = (
     next();
   } catch (error) {
     logger.error('Service auth middleware error:', error);
+    if (res.headersSent) {
+      return;
+    }
     return sendError(res, 'Service authentication failed', HttpStatus.INTERNAL_SERVER_ERROR);
   }
 };

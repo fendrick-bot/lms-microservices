@@ -30,6 +30,7 @@ export * from './schemas/enrollments';
 export * from './schemas/notifications';
 export * from './schemas/settings';
 export * from './schemas/file';
+export * from './schemas/oauth';
 
 // Export utilities
 export * from './utils/password-hash';
